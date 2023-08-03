@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "622e32cf-91d5-4719-a4fe-8d5bfd2ab125",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26560666"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "apikey",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "PMAK-64bcf13a86a2df0040441266-05a534356aeb7fb47a5f98367710875675",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/card/checkout?execution=e1s2&_eventld_pay/{{apikey}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"card",
+						"checkout"
+					],
+					"query": [
+						{
+							"key": "execution",
+							"value": "e1s2"
+						},
+						{
+							"key": "_eventld_pay/{{apikey}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "http://localhost:9001/medicare/",
+			"type": "string"
+		},
+		{
+			"key": "apikey",
+			"value": "PMAK-64bcf13a86a2df0040441266-05a534356aeb7fb47a5f98367710875675",
+			"type": "string"
+		}
+	]
+}
